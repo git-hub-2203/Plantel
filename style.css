@@ -243,9 +243,9 @@ header {
 ====================================================== */
 .hero {
   height: 100vh;
-  background: var(--gradient-overlay), url("images/bandeirabrasil.jpg");
+  background: var(--gradient-overlay), url("images/bandeirabrasil.webP");
   background-size: cover;
-  background-position: center;
+  background-position: center -220px;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
