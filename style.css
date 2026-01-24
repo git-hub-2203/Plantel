@@ -905,7 +905,8 @@ header {
 }
 
 .card-professor:hover {
-  border-color: var(--accent-color) !important; /*manter mesmo quando estiver no dark mode*/
+  border-color: var(--accent-color) !important;
+  /*manter mesmo quando estiver no dark mode*/
 }
 
 .foto-professor {
@@ -1083,6 +1084,20 @@ header {
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin-top: 10px;
+}
+
+.container-verde {
+  text-align: center;
+  background-color: var(--accent-color);
+  width: 25%;
+  margin: auto;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 2em;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  color: white;
 }
 
 /* ======================================================
