@@ -8,46 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ======================================================
-     2. SECTION REVEAL (.secao)  **CRÍTICO**
-  ====================================================== */
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  document.querySelectorAll(".secao").forEach((secao) => {
-    sectionObserver.observe(secao);
-  });
-
-  /* ======================================================
-     3. ELEMENT REVEAL (.reveal)
-  ====================================================== */
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px",
-    }
-  );
-
-  document.querySelectorAll(".reveal").forEach((el) => {
-    revealObserver.observe(el);
-  });
-
-  /* ======================================================
      4. FAQ ACCORDION
   ====================================================== */
   const faqItems = document.querySelectorAll(".faq-item");
@@ -197,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".count-up").forEach((counter) => {
       const target = +counter.dataset.target;
       let current = 0;
-      const increment = target / 80;
+      const increment = target / 100;
 
       const update = () => {
         current += increment;

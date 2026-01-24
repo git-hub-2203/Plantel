@@ -12,29 +12,6 @@
   transform: none;
 }
 
-/* 2. Animate only when JS adds classes */
-.js-enabled .secao {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.js-enabled .secao.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.js-enabled .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.js-enabled .reveal.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* 3. Reduce repaint cost */
 .secao,
 .reveal {
@@ -247,17 +224,8 @@ header {
 .secao {
   padding: 100px 10% 80px;
   background: var(--white);
-  /* Classes para o JavaScript de animação */
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Quando o JS detectar o scroll, adiciona esta classe */
-.secao.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .secao:nth-child(even) {
   background: var(--bg-light);
@@ -597,12 +565,6 @@ body.dark-theme .text-info-in-inside {
   }
 }
 
-/* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
 
 /*=================== SEÇÃO PARCEIROS =================*/
 :root {
@@ -715,7 +677,8 @@ body.dark-theme .text-info-in-inside {
 
   .hero-parceiro[data-parceiro="mobius"] {
     background-image: var(--gradient-overlay), url('fundo_parceiros/mobius-cel.png');
-    background-position: center 25px;;
+    background-position: center 25px;
+    ;
   }
 }
 
@@ -2092,3 +2055,4 @@ header {
   padding-left: max(5%, env(safe-area-inset-left));
   padding-right: max(5%, env(safe-area-inset-right));
 }
+
