@@ -925,7 +925,10 @@ header {
 
 .foto-germano img {
   object-position: center -5px;
-  height: 100%;
+}
+
+.foto-canellas img {
+  object-position: center -25px;
 }
 
 .info-professor {
